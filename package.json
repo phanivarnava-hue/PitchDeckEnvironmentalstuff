@@ -6,9 +6,9 @@
   "scripts": {
     "build": "npm run build:pitch1 && npm run build:pitch2 && npm run build:pitch3 && npm run build:pitch4",
     "build:pitch1": "vivliostyle build content/pitches/pitch-1-ev-charging-locator.md -o output/pitch-1-ev-charging.pdf --size A4",
-    "build:pitch2": "echo 'Pitch 2 not ready yet'",
-    "build:pitch3": "echo 'Pitch 3 not ready yet'",
-    "build:pitch4": "echo 'Pitch 4 not ready yet'",
+    "build:pitch2": "vivliostyle build content/pitches/pitch-2-circular-materials-marketplace.md -o output/pitch-2-circular-materials.pdf --size A4",
+    "build:pitch3": "vivliostyle build content/pitches/pitch-3-urban-heat-planning.md -o output/pitch-3-urban-heat.pdf --size A4",
+    "build:pitch4": "vivliostyle build content/pitches/pitch-4-danish-heat-link.md -o output/pitch-4-danish-heat-link.pdf --size A4",
     "preview:pitch1": "vivliostyle preview content/pitches/pitch-1-ev-charging-locator.md --theme @vivliostyle/theme-slide",
     "preview:pitch2": "echo 'Pitch 2 not ready yet'",
     "preview:pitch3": "echo 'Pitch 3 not ready yet'",
