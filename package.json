@@ -4,9 +4,15 @@
   "description": "Environmental pitch deck using Vivliostyle",
   "main": "index.js",
   "scripts": {
-    "build": "vivliostyle build content/index.md -o output/pitch-deck.pdf",
-    "preview": "vivliostyle preview content/index.md",
-    "build:html": "vivliostyle build content/index.md -o output/pitch-deck.html"
+    "build": "npm run build:pitch1 && npm run build:pitch2 && npm run build:pitch3 && npm run build:pitch4",
+    "build:pitch1": "vivliostyle build content/pitches/pitch-1-ev-charging-locator.md -o output/pitch-1-ev-charging.pdf --size A4",
+    "build:pitch2": "echo 'Pitch 2 not ready yet'",
+    "build:pitch3": "echo 'Pitch 3 not ready yet'",
+    "build:pitch4": "echo 'Pitch 4 not ready yet'",
+    "preview:pitch1": "vivliostyle preview content/pitches/pitch-1-ev-charging-locator.md --theme @vivliostyle/theme-slide",
+    "preview:pitch2": "echo 'Pitch 2 not ready yet'",
+    "preview:pitch3": "echo 'Pitch 3 not ready yet'",
+    "preview:pitch4": "echo 'Pitch 4 not ready yet'"
   },
   "keywords": [],
   "author": "",
