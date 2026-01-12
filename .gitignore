@@ -1,0 +1,5 @@
+node_modules/
+output/
+.vivliostyle/
+*.log
+.DS_Store

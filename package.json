@@ -1,0 +1,19 @@
+{
+  "name": "pitchdeckenvironmentalstuff",
+  "version": "1.0.0",
+  "description": "Environmental pitch deck using Vivliostyle",
+  "main": "index.js",
+  "scripts": {
+    "build": "vivliostyle build content/index.md -o output/pitch-deck.pdf",
+    "preview": "vivliostyle preview content/index.md",
+    "build:html": "vivliostyle build content/index.md -o output/pitch-deck.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@vivliostyle/cli": "^10.3.0",
+    "@vivliostyle/theme-slide": "^2.0.1"
+  }
+}
