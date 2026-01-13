@@ -1,0 +1,394 @@
+/**
+ * Dutch Government Design System - Vivliostyle Theme
+ * Inspired by NL Design System and Rijkshuisstijl
+ * Optimized for professional pitch decks and government documents
+ */
+
+/* ===== COLOR PALETTE ===== */
+:root {
+  /* Primary Dutch Government Colors */
+  --color-primary: #01689B;        /* Dutch Blue */
+  --color-primary-dark: #154273;   /* Dark Blue */
+  --color-primary-light: #3B9DD6;  /* Light Blue */
+  --color-secondary: #F39200;      /* Dutch Orange */
+  --color-accent: #39870C;         /* Dutch Green (sustainability) */
+
+  /* Neutral Colors */
+  --color-black: #1A1A1A;
+  --color-gray-dark: #535353;
+  --color-gray: #767676;
+  --color-gray-light: #E5E5E5;
+  --color-white: #FFFFFF;
+  --color-background: #FAFAFA;
+
+  /* Semantic Colors */
+  --color-success: #39870C;
+  --color-warning: #F39200;
+  --color-danger: #D52B1E;
+  --color-info: #01689B;
+
+  /* Typography */
+  --font-primary: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  --font-secondary: 'Calibri', 'Arial', sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  /* Border Radius */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+}
+
+/* ===== PAGE SETUP ===== */
+@page {
+  size: A4;
+  margin: 20mm 25mm;
+
+  @bottom-center {
+    content: counter(page);
+    font-family: var(--font-primary);
+    font-size: 10pt;
+    color: var(--color-gray);
+  }
+}
+
+@page :first {
+  margin: 0;
+  @bottom-center {
+    content: none;
+  }
+}
+
+/* ===== BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: 11pt;
+  line-height: 1.6;
+  color: var(--color-black);
+  background: var(--color-white);
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary-dark);
+  break-after: avoid;
+}
+
+h1 {
+  font-size: 28pt;
+  color: var(--color-primary);
+  border-bottom: 4px solid var(--color-secondary);
+  padding-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+}
+
+h2 {
+  font-size: 20pt;
+  color: var(--color-primary);
+  border-left: 4px solid var(--color-secondary);
+  padding-left: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+}
+
+h3 {
+  font-size: 16pt;
+  color: var(--color-primary-dark);
+}
+
+h4 {
+  font-size: 13pt;
+  color: var(--color-gray-dark);
+}
+
+h5, h6 {
+  font-size: 11pt;
+  font-weight: 600;
+  color: var(--color-gray-dark);
+}
+
+/* ===== PARAGRAPHS & TEXT ===== */
+p {
+  margin-bottom: var(--spacing-md);
+  text-align: justify;
+  hyphens: auto;
+}
+
+strong, b {
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+em, i {
+  font-style: italic;
+  color: var(--color-gray-dark);
+}
+
+/* ===== LISTS ===== */
+ul, ol {
+  margin-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+li {
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.7;
+}
+
+ul > li {
+  list-style-type: none;
+  position: relative;
+  padding-left: var(--spacing-md);
+}
+
+ul > li::before {
+  content: "▪";
+  color: var(--color-secondary);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* ===== LINKS ===== */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-primary-light);
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+  border-bottom-color: var(--color-primary-dark);
+}
+
+/* ===== BLOCKQUOTES ===== */
+blockquote {
+  margin: var(--spacing-lg) 0;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-left: 4px solid var(--color-accent);
+  background: var(--color-background);
+  font-style: italic;
+  color: var(--color-gray-dark);
+}
+
+blockquote p {
+  margin-bottom: var(--spacing-sm);
+}
+
+/* ===== TABLES ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--spacing-lg) 0;
+  break-inside: avoid;
+}
+
+thead {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+th {
+  padding: var(--spacing-sm) var(--spacing-md);
+  text-align: left;
+  font-weight: 600;
+  border: 1px solid var(--color-primary-dark);
+}
+
+td {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-gray-light);
+}
+
+tbody tr:nth-child(even) {
+  background: var(--color-background);
+}
+
+/* ===== CODE BLOCKS ===== */
+code {
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 10pt;
+  background: var(--color-gray-light);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  color: var(--color-gray-dark);
+}
+
+pre {
+  background: var(--color-gray-dark);
+  color: var(--color-white);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  margin: var(--spacing-lg) 0;
+  break-inside: avoid;
+}
+
+pre code {
+  background: none;
+  color: var(--color-white);
+  padding: 0;
+}
+
+/* ===== HORIZONTAL RULES ===== */
+hr {
+  border: none;
+  border-top: 2px solid var(--color-gray-light);
+  margin: var(--spacing-xl) 0;
+}
+
+/* ===== IMAGES ===== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: var(--spacing-lg) auto;
+  break-inside: avoid;
+}
+
+/* ===== CUSTOM COMPONENTS ===== */
+
+/* Info Box */
+.info-box {
+  background: var(--color-background);
+  border-left: 4px solid var(--color-info);
+  padding: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+  border-radius: var(--radius-md);
+  break-inside: avoid;
+}
+
+/* Warning Box */
+.warning-box {
+  background: #FFF8E1;
+  border-left: 4px solid var(--color-warning);
+  padding: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+  border-radius: var(--radius-md);
+  break-inside: avoid;
+}
+
+/* Success Box */
+.success-box {
+  background: #F1F8E9;
+  border-left: 4px solid var(--color-success);
+  padding: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+  border-radius: var(--radius-md);
+  break-inside: avoid;
+}
+
+/* Stats/Numbers */
+.stat-number {
+  font-size: 32pt;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: var(--spacing-xs);
+}
+
+.stat-label {
+  font-size: 10pt;
+  color: var(--color-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Highlight Text */
+.highlight {
+  background: linear-gradient(180deg, transparent 60%, #FFE082 60%);
+  padding: 0 4px;
+  font-weight: 500;
+}
+
+/* Section Divider */
+.section-divider {
+  border-top: 3px solid var(--color-primary);
+  margin: var(--spacing-xl) 0;
+  position: relative;
+}
+
+.section-divider::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--color-secondary);
+}
+
+/* Cover Page Styling */
+.cover-page {
+  page: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: var(--spacing-xl);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-white);
+}
+
+.cover-page h1 {
+  color: var(--color-white);
+  border-bottom: 4px solid var(--color-secondary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.cover-page p {
+  font-size: 14pt;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===== PRINT OPTIMIZATIONS ===== */
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+
+  table, figure, img, blockquote {
+    page-break-inside: avoid;
+  }
+
+  a {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+}
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles for accessibility */
+:focus {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
