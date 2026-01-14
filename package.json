@@ -15,6 +15,7 @@
     "build:jtbd": "vivliostyle build jtbd-new-ideas.md -o output/jtbd-new-ideas.pdf --size A4 --style content/styles/dutch-government.css",
     "build:b2g": "vivliostyle build b2g-government-ideas.md -o output/b2g-government-ideas.pdf --size A4 --style content/styles/dutch-government.css",
     "build:final": "vivliostyle build final-assessment-recommendations.md -o output/final-assessment-recommendations.pdf --size A4 --style content/styles/dutch-government.css",
+    "build:csrd": "vivliostyle build csrd-platform-pitch.md -o output/csrd-platform-pitch.pdf --size A4 --style content/styles/dutch-government.css",
     "preview:pitch1": "vivliostyle preview content/pitches/pitch-1-ev-charging-locator.md --style content/styles/dutch-government.css",
     "preview:pitch2": "vivliostyle preview content/pitches/pitch-2-circular-materials-marketplace.md --style content/styles/dutch-government.css",
     "preview:pitch3": "vivliostyle preview content/pitches/pitch-3-urban-heat-planning.md --style content/styles/dutch-government.css",
